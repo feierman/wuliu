@@ -1,0 +1,128 @@
+// 颜色系统
+// 主色系
+$color-primary: #ff9800;           // 主色：橙色
+$color-secondary: #ffe0b2;         // 辅色：浅橙色
+$color-accent: #e64a19;            // 强调色：深橙色
+
+// 文本与图标
+$color-text: #424242;              // 主要文本色：深灰色
+$color-icon: $color-text;          // 图标色：与文本一致
+
+// 状态色
+$color-error: #ff0000;             // 错误提示色：红色
+$color-surface: #f5f5f5;           // 表面色：浅灰色（卡片、背景）
+$color-disabled: #b0b0b0;          // 禁用状态色（新增）
+$color-hover: rgba($color-primary, 0.8); // 主色 hover 态（新增）
+
+// 透明度变量（可选）
+$opacity-light: 0.1;               // 用于阴影或低透明度效果
+$opacity-medium: 0.3;
+$opacity-dark: 0.5;
+
+// 常用间距变量
+$spacing-5: 5px;
+$spacing-10: 10px;
+$spacing-15: 15px;
+$spacing-20: 20px;
+
+// 圆角映射
+$border-radius-map: (
+  'small': $spacing-5,
+  'default': $spacing-10,
+  'medium': $spacing-15,
+  'large': $spacing-20
+);
+
+// 圆角函数
+@function border-radius($radius: 'default') {
+  @if map-has-key($border-radius-map, $radius) {
+    @return map-get($border-radius-map, $radius);
+  }
+  // 如果传入数值，直接返回
+  @if type-of($radius) == number {
+    @return $radius;
+  }
+  // 默认值
+  @return $spacing-10;
+}
+
+
+// 阴影函数
+@function box-shadow($level: 'default', $horizontal: 0px, $vertical: 0px, $blur: 10px, $spread: 0px, $color: rgba(0, 0, 0, 0.1)) {
+  $shadows: (
+    'light': 0px 2px 4px 0px rgba(0, 0, 0, 0.1),
+    'default': 0px 4px 6px 0px rgba(0, 0, 0, 0.1),
+    'medium': 0px 6px 10px 0px rgba(0, 0, 0, 0.12),
+    'heavy': 0px 10px 20px 0px rgba(0, 0, 0, 0.15)
+  );
+
+  @if map-has-key($shadows, $level) {
+    @return map-get($shadows, $level);
+  }
+  @return #{$horizontal} #{$vertical} #{$blur} #{$spread} #{$color};
+}
+
+// 间距变量
+$spacing-5: 5px;
+$spacing-10: 10px;
+$spacing-15: 15px;
+$spacing-20: 20px;
+$spacing-25: 25px;
+$spacing-30: 30px;
+$spacing-40: 40px;
+$spacing-50: 50px;
+$spacing-60: 60px;
+$spacing-80: 80px;
+$spacing-100: 100px;
+
+// 可视尺寸
+$vw-100: 100vw;
+$vw-90: 90vw;
+$vw-80: 80vw;
+$vw-70: 70vw;
+$vw-60: 60vw;
+$vw-50: 50vw;
+
+$vh-100: 100vh;
+$vh-90: 90vh;
+$vh-80: 80vh;
+$vh-70: 70vh;
+$vh-60: 60vh;
+$vh-50: 50vh;
+   
+// 根字体基准
+$root-font-size: 16px;
+
+// 字体大小（使用 rem）
+$font-xs: 0.75rem;    // 12px
+$font-sm: 0.875rem;   // 14px
+$font-base: 1rem;     // 16px
+$font-md: 1.125rem;   // 18px
+$font-lg: 1.25rem;    // 20px
+$font-xl: 1.5rem;     // 24px
+$font-xxl: 1.875rem;  // 30px
+
+// 字体粗细
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// 根字体设置
+:root {
+  font-size: $root-font-size; // 默认 16px
+}
+
+// 响应式调整
+@media (max-width: 1440px) {
+  :root {
+    font-size: 15px; // 笔记本
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    font-size: 14px; // 平板
+  }
+}
+
