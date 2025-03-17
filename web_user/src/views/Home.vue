@@ -1,11 +1,5 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
-  <h2>首页</h2>
+  <div>
+    <h1>PC Home Page</h1>
+  </div>
 </template>
-
-<style scoped lang="scss">
-
-</style>

@@ -1,16 +1,12 @@
-// 定义路由
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import Home from '@/views/Home.vue'
+import { createRouter,createWebHistory, RouteRecordRaw } from 'vue-router';
+import Home from '@/views/Home.vue';
 
-const routes:RouteRecordRaw[] = [
-    {
-        path:"/",
-        name:"Home",
-        component:Home
-    }
+const routes: RouteRecordRaw[] = [
+    { path: '/',name: 'Home' ,component: Home },
 ];
 const router = createRouter({
-     history: createWebHistory(),
-    routes,
-});
-export default router
+    history: createWebHistory(),
+    routes
+})
+
+export default router;

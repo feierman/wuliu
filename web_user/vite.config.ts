@@ -3,18 +3,20 @@ import { defineConfig } from 'vite'     //导入vite
 import vue from '@vitejs/plugin-vue'     //导入vue
 import path from 'path'                 //导入path
 import AutoImport from 'unplugin-auto-import/vite'  //导入unplugin-auto-import
-import Components from 'unplugin-vue-components/vite'   //导入unplugin-vue-components
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'   //导入ElementPlusResolver
-// https://vite.dev/config/
+import Components from 'unplugin-vue-components/vite';
+import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers';
+
 export default defineConfig({
-    plugins: [vue(),
+    plugins: [
+        vue(),
         AutoImport({
             imports: ['vue', 'vue-router'],
             dts: true,
         }),
         Components({
-            resolvers: [ElementPlusResolver()],
-            dts:'src/auto-imports.d.ts'
+            resolvers: [
+                AntDesignVueResolver({importStyle: false}),
+            ],
         }),
     ],
     // 别名
@@ -28,7 +30,7 @@ export default defineConfig({
         preprocessorOptions: {
             scss: {
                 additionalData: `
-                @use "@/assets/style/variable.scss" as *;
+                @use "@/style/variable.scss" as *;
             `,
             },
         },
