@@ -5,18 +5,17 @@
   </a-layout>
 </template>
 <script lang="ts" setup>
-import type { ref ,CSSProperties} from 'vue';
+import {ref} from 'vue';
+import type {CSSProperties} from 'vue';
 
 import PcHeader from "@/components/PcHeader.vue";
-
-const headerStyle ={
+const headerStyle = ref<CSSProperties>({
   textAlign: 'center',
-  // color: '#fff',
   height:60,
   paddingInline: '64',
   lineHeight: '64px',
   backgroundColor: '#fff'
-}
+})
 </script>
 <style scoped>
 
