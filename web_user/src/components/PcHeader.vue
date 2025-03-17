@@ -93,5 +93,7 @@ const handleMenuClick = ({ key }: { key: string }) => {
     margin-right: 8px;
   }
 }
-
+.ant-menu {
+  border-bottom: none !important; /* 移除底部边框 */
+}
 </style>
