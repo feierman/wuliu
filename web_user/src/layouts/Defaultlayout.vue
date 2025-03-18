@@ -5,9 +5,9 @@
   </a-layout>
 </template>
 <script lang="ts" setup>
-import type { ref ,CSSProperties} from 'vue';
 
-import PcHeader from "@/components/PcHeader.vue";
+
+import PcHeader from "@/components/Pcheader.vue";
 
 const headerStyle ={
   textAlign: 'center',

@@ -11,9 +11,9 @@ declare module 'vue' {
     Banner: typeof import('./components/Banner.vue')['default']
     'Carousel ': typeof import('./components/Carousel .vue')['default']
 
-    Header: typeof import('./components/pcHeader.vue')['default']
-    PcFooter: typeof import('./components/PcFooter.vue')['default']
-    PcHeader: typeof import('./components/PcHeader.vue')['default']
+    Header: typeof import('./components/Pcheader.vue')['default']
+    PcFooter: typeof import('./components/Pcfooter.vue')['default']
+    PcHeader: typeof import('./components/Pcheader.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Search: typeof import('./components/Search.vue')['default']
