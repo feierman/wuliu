@@ -10,7 +10,7 @@
 <script lang="ts" setup>
 import {ref} from 'vue';
 import type {CSSProperties} from 'vue';
- import PcHeader from "@/components/PcHeader.vue";
+ import PcHeader from "@/components/Pcheader.vue";
 import Carousel from "@/components/Carousel .vue";
 const headerStyle = ref<CSSProperties>({
   textAlign: 'center',  //

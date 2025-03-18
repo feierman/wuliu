@@ -23,7 +23,7 @@ declare module 'vue' {
     ASubMenu: typeof import('ant-design-vue/es')['SubMenu']
     'Carousel ': typeof import('./src/components/Carousel .vue')['default']
     PcFooter: typeof import('./src/components/PcFooter.vue')['default']
-    PcHeader: typeof import('./src/components/PcHeader.vue')['default']
+    PcHeader: typeof import('./src/components/Pcheader.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Search: typeof import('./src/components/Search.vue')['default']
